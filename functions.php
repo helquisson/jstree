@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * 
+ * @return mysqli
+ */
 function connectBD() {
 	$mysqli = new mysqli ( "localhost", "root", "", "jstree" );
 	return $mysqli;
@@ -7,7 +11,7 @@ function connectBD() {
 
 /**
  * Get Sub Category
- * @param unknown $id
+ * @param cotegory $id
  * @return string
  */
 function getSubCategory($id) {
@@ -35,7 +39,7 @@ function getSubCategory($id) {
 
 /**
  *
- * @param unknown $id        	
+ * @param category $id        	
  */
 function getArticles($id) {
 	$articles = '';
@@ -57,7 +61,7 @@ function getArticles($id) {
 
 /**
  * 
- * @param unknown $id
+ * @param article $id
  */
 function viewArticle($id) {
 	
