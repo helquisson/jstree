@@ -13,10 +13,23 @@ $(function() {
     },
     "plugins" : ["search"]
   });
-  $("#s").submit(function(e) {
+
+  /* Use search without button */
+  var to = false;
+  $('#q').keyup(function () {
+    if(to) { clearTimeout(to); }
+    to = setTimeout(function () {
+      var v = $('#q').val();
+      $('#container').jstree(true).search(v);
+    }, 250);
+  });
+
+  /* Use search with button */
+  /* $("#s").submit(function(e) {
 	  e.preventDefault();
 	  $("#container").jstree(true).search($("#q").val());
-	});
+	}); */
+	
   $("#container").bind("select_node.jstree", function(e, data) {
 	  window.location.href = data.node.a_attr.href;
 	});

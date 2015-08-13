@@ -1,8 +1,11 @@
 <?php require_once 'header.php'; ?>
-<form id="s">
+<!-- Use search without button -->
+<input id="q" placeholder="Search" />
+<!-- Use search with button -->
+<!-- <form id="s">
   <input type="search" id="q" />
   <button type="submit">Search</button>
-</form>
+</form> -->
 <br/><br/>
 <div id="container">
 </div>
