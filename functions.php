@@ -5,7 +5,7 @@
  * @return mysqli
  */
 function connectBD() {
-	$mysqli = new mysqli ( "localhost", "root", "", "jstree" );
+	$mysqli = new mysqli ( "localhost", "root", "admin123", "jstree" );
 	return $mysqli;
 }
 
